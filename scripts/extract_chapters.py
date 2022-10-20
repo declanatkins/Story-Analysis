@@ -15,7 +15,6 @@ with open(args.book_file_path) as book_f:
     full_text = book_f.read()
 
 chapters = full_text.split(args.chapter_delimiter)
-print(len(chapters))
 
 while args.first_chapter_name and chapters and not chapters[0].strip().startswith(args.first_chapter_name):
     del chapters[0]
